@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Added Learning – HCI</title>
+
+    <style>
+      /* Minimal styling allowed */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .lecture {
+        background-color: rgba(127, 255, 212, 0.323);
+      }
+      .lecture {
+        background-color: rgba(127, 255, 212, 0.323);
+      }
+      .self_study {
+        background-color: rgba(127, 234, 255, 0.323);
+      }
+
+      img {
+        width: 400px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Added Learning</h1>
+      <p>
+        These are my notes and understanding of lectures from week 1-4 and
+        content that I've studeied from the book.
+      </p>
+    </header>
+
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+
+        <!-- Current page is indicated using aria-current -->
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="analysis.html">Interaction Analysis</a></li>
+        <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+        <li><a href="assignment01.html">Lab 01 Rules</a></li>
+        <li>
+          <a href="answers.html">Lab Exam Practice Questions - Answered</a>
+        </li>
+        <li>
+          <a href="added_learnings.html" aria-current="page">Added Learning</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="self_study">
+  <h2>Self Study</h2>
+  <p>
+    Effective interface design requires time and careful consideration, but
+    even small, user-focused decisions—such as involving real users early in
+    the process—can help avoid major design problems. The automatic syringe
+    case illustrates how a numeric keypad interface caused a dangerous
+    tenfold dosage error, an issue that was only identified after consulting
+    hospital staff.
+  </p>
+  <article>
+    <h3>Analyzing the Syringe Interface Using Different Models</h3>
+    <p>
+      The sections below describe how Norman’s Model, GOMS, and KLM each
+      evaluate the syringe interface redesign, in which a numeric keypad was
+      replaced with increment and decrement buttons.
+    </p>
+  </article>
+  <article>
+    <h4>Norman’s Cycle of Action</h4>
+    <p>
+      Norman’s model reveals a significant gulf of execution in the original
+      keypad-based design. The user’s goal of setting a precise dose was poorly
+      supported, as a single extra key press could lead to a lethal dosage.
+      The redesigned button interface narrows this gulf by aligning user
+      intentions with safer, more controlled actions.
+    </p>
+  </article>
+  <article>
+    <h4>GOMS Model</h4>
+    <p>
+      From a GOMS perspective, entering a dose is decomposed into goals,
+      methods, and operators. While the keypad allows quicker input, it offers
+      little assistance for spotting or correcting errors. The button-based
+      approach is slower, but it requires users to confirm each change,
+      increasing overall task safety.
+    </p>
+  </article>
+  <article>
+    <h4>Keystroke-Level Model (KLM)</h4>
+    <p>
+      KLM is used to predict execution time for experienced users. It would
+      likely indicate that keypad entry is faster due to fewer keystrokes,
+      whereas repeated button presses take more time. However, this comparison
+      also highlights that efficiency alone is insufficient when evaluating
+      safety-critical systems such as medical devices.
+    </p>
+  </article>
+  <article>
+    <h4>The Importance of Iteration</h4>
+    <p>
+      Because users and usage contexts are complex, interface design rarely
+      succeeds on the first attempt. Developing early prototypes and engaging
+      users throughout the design process helps uncover serious issues before
+      they become permanently built into the system.
+    </p>
+  </article>
+
+  <article>
+    <h3>Norman’s Model of Interaction</h3>
+    <p>
+      Donald Norman is a leading figure in Human–Computer Interaction, widely
+      recognized for advocating user-centered design, usability, and cognitive
+      engineering. His interaction model is influential because it closely
+      reflects how users naturally think about and interact with computer
+      systems.
+    </p>
+    <p>
+      In Norman’s model, interaction begins with the formation of a goal and a
+      plan to achieve it. The user then carries out actions through the
+      interface. Afterward, the user observes the system’s response and
+      evaluates whether the result matches the original goal, determining the
+      next steps.
+    </p>
+  </article>
+
+  <article>
+    <h4>The Seven Stages of Action</h4>
+    <p>
+      Norman divides interaction into two primary phases: execution and
+      evaluation. Together, these phases consist of seven stages:
+    </p>
+    <ol>
+      <li>Defining the goal</li>
+      <li>Forming the intention</li>
+      <li>Specifying the action sequence</li>
+      <li>Executing the action</li>
+      <li>Perceiving the system state</li>
+      <li>Interpreting the system state</li>
+      <li>Evaluating the outcome against the goal</li>
+    </ol>
+  </article>
+
+  <article>
+    <h4>Gulfs of Execution and Evaluation</h4>
+    <p>
+      Norman uses this framework to explain why poorly designed interfaces
+      cause user difficulties. The gulf of execution is the gap between a
+      user’s goals and the actions the system allows. The gulf of evaluation
+      is the gap between the system’s output and how easily the user can
+      understand it.
+    </p>
+  </article>
+
+  <article>
+    <h4>Human Error: Slips and Mistakes</h4>
+    <p>
+      Human errors can be categorized as slips or mistakes. Slips occur when
+      the user understands the system but performs an incorrect action, such
+      as pressing the wrong button. Mistakes occur when the user forms an
+      incorrect goal due to misunderstanding the system, such as misreading
+      the meaning of an icon.
+    </p>
+    <p>
+      Slips can often be minimized through improved interface design, such as
+      increasing the distance between buttons. Mistakes usually require more
+      substantial solutions, including interface redesigns, better training,
+      or clearer metaphors.
+    </p>
+  </article>
+
+  <article>
+    <h3>GOMS Model</h3>
+    <p>
+      The GOMS model, introduced by Card, Moran, and Newell, explains task
+      performance by breaking interaction into Goals, Operators, Methods, and
+      Selection rules. It helps designers analyze both the mental and physical
+      components of user tasks.
+    </p>
+    <p>
+      Goals define what the user aims to accomplish. Operators are basic
+      actions, such as pressing a key or reading a message. Methods represent
+      different ways to achieve a goal, while selection rules determine which
+      method is chosen based on context or experience.
+    </p>
+  </article>
+
+  <article>
+    <h4>Design Focus: Why GOMS Saves Money</h4>
+    <p>
+      GOMS has been applied in real-world system evaluations. For instance,
+      the telecommunications company NYNEX used GOMS to assess a proposed
+      computer system and found it would perform more slowly than the existing
+      one. As a result, the project was abandoned, saving the company millions
+      of dollars.
+    </p>
+  </article>
+
+  <article>
+    <h3>Keystroke-Level Model (KLM)</h3>
+    <p>
+      The Keystroke-Level Model is a more detailed extension of GOMS that
+      focuses on predicting execution time for expert users performing routine
+      tasks. It is intended for short, clearly defined tasks that typically
+      take less than 20 seconds.
+    </p>
+    <p>
+      KLM assumes error-free performance and focuses exclusively on the
+      execution phase of interaction. It breaks tasks down into low-level
+      operators, such as keystrokes, mouse clicks, pointing, hand movements,
+      mental preparation, and system response time.
+    </p>
+    <p>
+      By assigning standard time values to each operator and adding them
+      together, KLM enables designers to compare interface designs or task
+      methods and predict which will be faster—without conducting full user
+      studies.
+    </p>
+  </article>
+  
+        <article>
+          <p style="font-weight: bold">
+            Reference: Human-Computer Interaction, Alan Dix, Chapter 3 -
+            Interaction and Chapter 12 - Cognitive Models, and the Design Focus.
+            Page # 125, 422–424, 437–439.
+          </p>
+        </article>
+      </section>
+
+      <!-- Lecture 1 -->
+      <section class="lecture">
+        <h2>Lecture 1</h2>
+
+        <article>
+          <h3>HCI Overview</h3>
+          <p>
+            Human–Computer Interaction (HCI) combines concepts from
+            <strong>Cognitive Psychology</strong>, <strong>Design</strong>, and
+            <strong>Computer Science</strong> to understand how humans interact
+            with technology.
+          </p>
+        </article>
+
+        <article>
+          <h3>Human Behavior and Memory</h3>
+          <ul>
+            <li>
+              Humans often perform tasks based on how they were taught or what
+              they observed at a young age (e.g., drawing a glass from memory).
+            </li>
+            <li>
+              Habits can be changed, but the fundamental nature of a person
+              remains stable.
+            </li>
+            <li>
+              Humans store information in:
+              <ul>
+                <li>Short-Term Memory (STM)</li>
+                <li>Long-Term Memory (LTM)</li>
+                <li>Perceptual (Sensory) Storage</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Interfaces and Models</h3>
+          <ul>
+            <li>Types of interfaces: GUI, CLI, voice-based, gesture-based</li>
+            <li>
+              Cognitive Neural Networks (CNNs) resemble human processing by
+              recognizing patterns such as texture, shape, and color.
+            </li>
+            <li>
+              Fitts’s Law predicts the time required to move to a target based
+              on distance and size and influenced the invention of the mouse.
+            </li>
+            <li>
+              Chunking breaks large information into smaller units (e.g.,
+              1234567890 → 123-456-7890).
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>UI vs UX</h3>
+          <p>
+            <strong>UI (User Interface)</strong> focuses on the visual design of
+            a product and how it looks.
+          </p>
+          <p>
+            <strong>UX (User Experience)</strong> focuses on the overall
+            experience and how the product feels to use, including usability and
+            satisfaction.
+          </p>
+        </article>
+      </section>
+
+      <!-- Lecture 2 -->
+      <section class="lecture">
+        <h2>Lecture 2</h2>
+
+        <article>
+          <h3>Chain of Memory</h3>
+          <ol>
+            <li>Sensation</li>
+            <li>Attention</li>
+            <li>Perception</li>
+            <li>Learning</li>
+            <li>Memory</li>
+            <li>Forgetting</li>
+            <li>Thinking</li>
+            <li>Problem Solving</li>
+            <li>Reasoning</li>
+            <li>Decision Making</li>
+          </ol>
+        </article>
+
+        <article>
+          <h3>The Automatic Syringe Case</h3>
+          <p>
+            The Automatic Syringe case demonstrates how small interface design
+            decisions can lead to serious consequences. Numeric keypads caused
+            dangerous input errors due to accidental key presses.
+          </p>
+          <p>
+            Interfaces rarely work perfectly on the first attempt, making
+            iteration essential. Early prototypes should be easy to modify or
+            discard, and rapid prototyping techniques such as paper sketches and
+            mock-ups help designers test ideas quickly before full development.
+          </p>
+        </article>
+      </section>
+
+      <!-- Lecture 3 -->
+      <section class="lecture">
+        <h2>Lecture 3</h2>
+
+        <article>
+          <h3>Gulfs of Interaction</h3>
+          <p>
+            The gulf of execution is the gap between what a user wants to do and
+            the actions the system allows. The gulf of evaluation is the gap
+            between what the system does and how easily the user can understand
+            the result.
+          </p>
+        </article>
+
+        <article>
+          <h3>Norman’s Action Cycle and gulf of interactions</h3>
+          <p>insta DM section UI analysis based on Norman's 7 stages and gulf analysis</p>
+          <img
+            src="./norman staged of UI.jpg"
+            alt="week3 UI analysis (insta app)"
+          />
+        </article>
+
+       
+      </section>
+
+      
+      </section>
+    </main>
+
+    <footer>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="answers.html">Lab Exam Practice Questions - Answered</a>
+        </li>
+        <li>
+          <a href="assignment01.html">Lab 01 Instructions</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
