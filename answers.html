@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding for consistent text rendering -->
+    <meta charset="UTF-8" />
+
+    <!-- Page title shown in browser tab and announced by screen readers -->
+    <title>Practice Questions - Answered</title>
+
+    <style>
+      /* Minimal styling allowed in Lab 01 (color + font only) */
+      body {
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page header: identifies the page purpose -->
+    <header>
+      <h1>Practice Questions - Answered</h1>
+    </header>
+
+    <!-- Primary navigation: identical structure across all pages -->
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+
+        <!-- Current page is indicated using aria-current -->
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="analysis.html">Interaction Analysis</a></li>
+        <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+        <li><a href="assignment01.html">Lab 01 Rules</a></li>
+        <li>
+          <a href="answers.html" aria-current="page"
+            >Lab Exam Practice Questions - Answered</a
+          >
+        </li>
+        <li><a href="added_learnings.html">Added Learning</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main landmark: primary content of this page -->
+    <main>
+      <section>
+        <h2>Part A: Find Mistakes (Identify + Fix)</h2>
+        <table border="1">
+          <caption>
+            Common HTML structure and accessibility mistakes
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">UI Element / Issue</th>
+              <th scope="col">Wrong HTML (with mistake)</th>
+              <th scope="col">Correct UI Element</th>
+              <th scope="col">Correct HTML</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row">
+                Multiple <code>h1</code> elements used on a page
+              </th>
+              <td>
+                <pre><code>&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;h1&gt;Section Title&lt;/h1&gt;</code></pre>
+              </td>
+              <td>Single main page heading</td>
+              <td>
+                <pre><code>&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;h2&gt;Section Title&lt;/h2&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                <code>nav</code> used for non-navigation content
+              </th>
+              <td>
+                <pre><code>&lt;nav&gt;
+  &lt;p&gt;Welcome to my website&lt;/p&gt;
+&lt;/nav&gt;</code></pre>
+              </td>
+              <td><code>nav</code> contains navigation links only</td>
+              <td>
+                <pre><code>&lt;header&gt;
+  &lt;p&gt;Welcome to my website&lt;/p&gt;
+&lt;/header&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Missing <code>alt</code> attribute on image</th>
+              <td>
+                <pre><code>&lt;img src="diagram.png"&gt;</code></pre>
+              </td>
+              <td>Image with alternative text</td>
+              <td>
+                <pre><code>&lt;img src="diagram.png" alt="Norman action cycle diagram"&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Decorative image given meaningless alt text</th>
+              <td>
+                <pre><code>&lt;img src="line.png" alt="line"&gt;</code></pre>
+              </td>
+              <td>Decorative image with empty alt</td>
+              <td>
+                <pre><code>&lt;img src="line.png" alt=""&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Form input missing a label</th>
+              <td>
+                <pre><code>&lt;input type="text" name="email"&gt;</code></pre>
+              </td>
+              <td>Form input with associated label</td>
+              <td>
+                <pre><code>&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input type="text" id="email" name="email"&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">List items not wrapped in a list</th>
+              <td>
+                <pre><code>&lt;p&gt;Item 1&lt;/p&gt;
+&lt;p&gt;Item 2&lt;/p&gt;</code></pre>
+              </td>
+              <td>Proper unordered list</td>
+              <td>
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row"><code>main</code> element used more than once</th>
+              <td>
+                <pre><code>&lt;main&gt;Content A&lt;/main&gt;
+&lt;main&gt;Content B&lt;/main&gt;</code></pre>
+              </td>
+              <td>Single main content landmark</td>
+              <td>
+                <pre><code>&lt;main&gt;
+  Content A
+  Content B
+&lt;/main&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Table header cells use <code>td</code> instead of
+                <code>th</code>
+              </th>
+              <td>
+                <pre><code>&lt;tr&gt;
+  &lt;td&gt;Name&lt;/td&gt;
+  &lt;td&gt;Score&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+              </td>
+              <td>Header cells marked correctly</td>
+              <td>
+                <pre><code>&lt;tr&gt;
+  &lt;th scope="col"&gt;Name&lt;/th&gt;
+  &lt;th scope="col"&gt;Score&lt;/th&gt;
+&lt;/tr&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Clickable text styled as button instead of using
+                <code>button</code>
+              </th>
+              <td>
+                <pre><code>&lt;div&gt;Submit&lt;/div&gt;</code></pre>
+              </td>
+              <td>Semantic button element</td>
+              <td>
+                <pre><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Using <code>div</code> instead of <code>section</code> for
+                thematic grouping
+              </th>
+              <td>
+                <pre><code>&lt;div&gt;
+  &lt;h2&gt;Lecture Notes&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+              </td>
+              <td>Thematic content section</td>
+              <td>
+                <pre><code>&lt;section&gt;
+  &lt;h2&gt;Lecture Notes&lt;/h2&gt;
+&lt;/section&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Form button missing type attribute</th>
+              <td>
+                <pre><code>&lt;button&gt;Submit&lt;/button&gt;</code></pre>
+              </td>
+              <td>Explicit button type</td>
+              <td>
+                <pre><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Image used as link without descriptive alt text
+              </th>
+              <td>
+                <pre><code>&lt;a href="home.html"&gt;
+  &lt;img src="home.png" alt=""&gt;
+&lt;/a&gt;</code></pre>
+              </td>
+              <td>Linked image with descriptive alt</td>
+              <td>
+                <pre><code>&lt;a href="home.html"&gt;
+  &lt;img src="home.png" alt="Go to home page"&gt;
+&lt;/a&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Using <code>strong</code> for headings</th>
+              <td>
+                <pre><code>&lt;strong&gt;Lecture 1&lt;/strong&gt;</code></pre>
+              </td>
+              <td>Proper heading element</td>
+              <td>
+                <pre><code>&lt;h2&gt;Lecture 1&lt;/h2&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Empty link with no accessible name</th>
+              <td>
+                <pre><code>&lt;a href="next.html"&gt;&lt;/a&gt;</code></pre>
+              </td>
+              <td>Link with descriptive text</td>
+              <td>
+                <pre><code>&lt;a href="next.html"&gt;Next page&lt;/a&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Using <code>span</code> instead of <code>label</code> for form
+                text
+              </th>
+              <td>
+                <pre><code>&lt;span&gt;Name&lt;/span&gt;
+&lt;input type="text"&gt;</code></pre>
+              </td>
+              <td>Proper form labeling</td>
+              <td>
+                <pre><code>&lt;label for="name"&gt;Name&lt;/label&gt;
+&lt;input id="name" type="text"&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Paragraph used to wrap block elements</th>
+              <td>
+                <pre><code>&lt;p&gt;
+  &lt;section&gt;Content&lt;/section&gt;
+&lt;/p&gt;</code></pre>
+              </td>
+              <td>Block elements not nested in paragraphs</td>
+              <td>
+                <pre><code>&lt;section&gt;Content&lt;/section&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Missing <code>lang</code> attribute on <code>html</code>
+              </th>
+              <td>
+                <pre><code>&lt;html&gt;</code></pre>
+              </td>
+              <td>Language specified for accessibility</td>
+              <td>
+                <pre><code>&lt;html lang="en"&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Using table for layout instead of data</th>
+              <td>
+                <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Header&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </td>
+              <td>Layout using semantic structure</td>
+              <td>
+                <pre><code>&lt;header&gt;Header&lt;/header&gt;</code></pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Part B: True / False</h2>
+        <ol>
+          <li>
+            Every link inside <code>&lt;ul&gt;</code> must be placed inside an
+            <code>&lt;li&gt;</code>. <strong>T</strong>
+          </li>
+          <li>
+            A page may have multiple
+            <code>&lt;h1&gt;</code> headings to make text larger.
+            <strong>F</strong>
+          </li>
+          <li>
+            <code>aria-current="page"</code> should be used on the active
+            navigation item. <strong>T</strong>
+          </li>
+          <li>
+            A form is accessible even if it has no
+            <code>&lt;label&gt;</code> elements. <strong>F</strong>
+          </li>
+          <li>
+            KLM predicts execution time for expert, error-free performance.
+            <strong>T</strong>
+          </li>
+        </ol>
+      </section>
+      <section>
+        <h2>Part C: Short Answer</h2>
+        <ol>
+          <li>
+            <p>
+              <strong>
+                Explain the difference between a semantic element (e.g., nav)
+                and a generic element (e.g., div).
+              </strong>
+            </p>
+            <p>
+              Semantic elements like <nav> describe the meaning and purpose of their content to browsers, assistive technologies, and search engines, which helps improve accessibility and structure. Generic elements such as <div>, however, have no built-in meaning and are used only for grouping or styling content.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>
+                Why does KLM not model high-level planning and interpretation?
+              </strong>
+            </p>
+            <p>
+             KLM excludes high-level planning and interpretation because it assumes users already know the required actions. As the task is routine and error-free, the model measures only the time for basic actions, not cognitive processes such as thinking or decision-making.
+            </p>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="added_learnings.html">Added Learnings</a></p>
+    </footer>
+  </body>
+</html>
